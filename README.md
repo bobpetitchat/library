@@ -1,1 +1,1 @@
-library app made with html, css and JS. <br>
+library app made with html, css and js. <br>
