@@ -2,39 +2,31 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  font-family: "Rubik", sans-serif;
-}
+  font-family: 'Mulish', sans-serif;}
 
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
+  @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200&display=swap');
 
 html,
 body {
   height: 100%;
 }
 
-.container {
+.wrapper {
   display: flex;
   justify-content: center;
   flex-direction: row;
-  align-items: center;
+  min-height: 100vh;
+  position: relative;
 }
 
-input {
-  max-height: 50px;
-  max-width: 70px;
-  border: 1px solid hsl(229, 87%, 56%);
-}
-
-input:focus {
-  border: 1px solid hsl(53, 87%, 56%);
-  outline: none !important;
- }
-
-.smallcontainer {
+.small-container {
   font-size: 12px;
+  max-width: 100px;
+  padding: 15px;
+  margin: 15px;
 }
 
-.buttoncontainer {
+.button-container {
   max-width: 10px;
   margin: 0 10px;
 }
@@ -51,4 +43,77 @@ button {
   background-color: white;
   border: 1px solid #fd0;
   color: black;  
+}
+
+
+input {
+  max-height: 50px;
+  max-width: 70px;
+  border: 1px solid hsl(229, 87%, 56%);
+}
+
+input:focus {
+  border: 1px solid hsl(53, 87%, 56%);
+  outline: none !important;
+ }
+
+ 
+
+section {
+  display: flex;
+  flex-direction: column;
+  width: 88%;
+}
+
+nav {
+  width: 300px;
+  font-weight: 600;
+  color: hsl(7, 94%, 51%);
+  padding: 20px;
+  padding-bottom: 10px;
+}
+
+main {
+  flex-grow: 1;
+}
+
+.line {
+  width: 95%;
+  height: 1.9px;
+  border: 0 none;
+  background-color: hsl(7, 94%, 51%);
+}
+
+hr {
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+section > ul {
+  display: flex;
+}
+
+.list > li:first-child {
+  padding-left: -20px;
+}
+
+.list > li {
+  padding-right: 25px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+  
+
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: hsl(7, 94%, 51%);
+}
+
+h2, p {
+ color: hsl(7, 94%, 51%);
 }
