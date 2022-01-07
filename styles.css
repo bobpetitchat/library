@@ -2,9 +2,53 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
 }
+
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
 
 html,
 body {
   height: 100%;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
+
+input {
+  max-height: 50px;
+  max-width: 70px;
+  border: 1px solid hsl(229, 87%, 56%);
+}
+
+input:focus {
+  border: 1px solid hsl(53, 87%, 56%);
+  outline: none !important;
+ }
+
+.smallcontainer {
+  font-size: 12px;
+}
+
+.buttoncontainer {
+  max-width: 10px;
+  margin: 0 10px;
+}
+
+button {  
+  display: inline-block;
+  outline: 0;
+  border: none;
+  cursor: pointer;
+  min-height: 20px;
+  max-width: 30px;
+  padding: 0 24px;
+  font-size: 12px;
+  background-color: white;
+  border: 1px solid #fd0;
+  color: black;  
 }
