@@ -103,11 +103,14 @@ input:focus {
  
 main {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 15px;
-  padding: 20px;
-  padding-bottom: 10px;
   text-align: center;
+  background-color: hsl(195, 2%, 96%, 0.8);
+  height: 50%;
+
 }
 
 span {
@@ -123,5 +126,7 @@ hr {
   margin-left: auto;
 }
 
-
-
+.addbutton {
+  width: 100px;
+  max-height: 25px;
+}
