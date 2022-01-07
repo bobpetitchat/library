@@ -6,16 +6,19 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200&display=swap');
 
-
 html,
 body {
   height: 100%;
+  background-image: url("https://images.unsplash.com/photo-1618519764620-7403abdbdfe9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
+  margin: 0 auto;
 }
 
 header {
-  background-color: hsl(56, 95%, 52%);
+  max-width: 100%;
+  background-color: hsl(46, 100%, 50%);
   display: flex;
   flex-direction: row; 
+  align-items: center;
   justify-content: space-between;
 }
 
@@ -25,22 +28,16 @@ nav {
   font-weight: 600;
   color: black;
   padding: 20px;
-  padding-bottom: 10px;
+  padding-bottom: 12px;
   font-size: 35px;
 }
 
-a {
-  text-decoration: none;
-  color: black;
-}
-
-
 section {
-  width: 100%;
+  max-width: 35%;
 }
 
 .line {
-  width: 98.5%;
+  width: 100%;
   height: 1.2px;
   border: 0 none;
   background-color: black;
@@ -54,25 +51,33 @@ display: inline-block;
 outline: 0;
 text-align: center;
 cursor: pointer;
-height: 34px;
-width: 100px;
+min-height: 50px;
+width: 25%;
 padding: 0 13px;
-color: #fff;
+color: black;
 vertical-align: top;
-border-radius: 3px;
 border: 1px solid transparent;
-background: #cc4d29;
-border-color: #cc4d29;
+background: transparent;
 font-weight: 600;
 line-height: 16px;
-font-size: 11px;
+font-size: 13px;
+transition-duration: .15s;
+transition-property: all;
+transition-timing-function: cubic-bezier(.4,0,.2,1);
+}
+
+
+
+.context {
+  background-color: hsl(46, 100%, 50%);
+  min-height: 50px;
+  display: flex;
+  justify-content: space-around;
 }
 
 button:hover {
-    background: white;
-    color: #cc4d29;
-    font-weight: 800;
-    border: 1px solid #cc4d29;
+    background: black;
+    color: hsl(46, 100%, 50%);
 }
 
 input {
@@ -84,11 +89,11 @@ input {
   border-radius: 0;
   width: 100px;
   height: 25px;
-  border: 1px solid hsl(7, 94%, 51%);
-  border-bottom: 1px solid hsl(7, 94%, 51%);
+  border: 1px solid black;
   padding: 0 16px;
   color: #161616;
   outline: none;
+  background-color: transparent;
   }
 
 input:focus {
@@ -102,6 +107,7 @@ main {
   gap: 15px;
   padding: 20px;
   padding-bottom: 10px;
+  text-align: center;
 }
 
 span {
@@ -117,18 +123,5 @@ hr {
   margin-left: auto;
 }
 
-ul {
-  display: flex;
-  padding-left: 20px;
-}
 
-.list > a {
-  padding-right: 25px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-}
-  
-li {
-  list-style: none;
-}
 
