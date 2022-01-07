@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <title>project-3</title>
+    <title>library</title>
   </head>
   <body>
     <hr class="line" />
@@ -23,21 +23,28 @@
     <hr class="line" />
   </section>
 <div class="context">   
-  <button class="makemodalappear">Add a book</button>
-  <button >Books</button>
-  <button >Explore</button>
-  <button >Trending</button>
+  <button>Books</button>
+  <button>Explore</button>
+  <button>Trending</button>
   </div>
-      <hr class="line" />
-  <main>
 
+  
+      <hr class="line" />
+  <div class="modal-container" id="modal_container">
+    <div class="modal">
     <span>Title: <input type="text" class="titleInput"></span>
     <span>Author: <input type="text" class="authorInput"></span>
     <span>Pages: <input type="text" class="pagesInput"></span>
-    <button class="addbutton">Add book</button>
+  <div class="modal-buttons">  <button class="addbutton">Add book</button>
+    <button id="close">
+			Close
+		</button> </div>
 
+    </div>
+  </div>
+          <main>    
+            <button id="open">Add a book</button>
           </main>
-          
 <script type="text/javascript" src="script.js"></script>
         </body>   
 </html>
