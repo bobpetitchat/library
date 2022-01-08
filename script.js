@@ -1,4 +1,12 @@
 "use strict";
+const card = document.querySelector(".card")
+const cardTitle = document.querySelector(".cardTitle")
+const cardAuthor = document.querySelector(".cardAuthor")
+const cardPages = document.querySelector(".cardPages")
+
+const open = document.getElementById("open");
+const close = document.getElementById("close");
+const modal = document.getElementById("modal_container");
 
 let myLibrary = [];
 
@@ -26,22 +34,17 @@ addBookToLibrary()
     
 function clearEv() {
     document.querySelector(".titleInput").value = "";
-document.querySelector(".authorInput").value = "";
+    document.querySelector(".authorInput").value = "";
     document.querySelector(".pagesInput").value = "";
 }
-const cardTitle = document.querySelector(".cardTitle")
-const cardAuthor = document.querySelector(".cardAuthor")
-const cardPages = document.querySelector(".cardPages")
 
-function displayBook () {
-    cardTitle.innerText = "Title: " + document.querySelector(".titleInput").value
-    cardAuthor.innerText = "Author: " + document.querySelector(".authorInput").value
-    cardPages.innerText = "Number of pages: " + document.querySelector(".pagesInput").value 
+
+function displayBook() {
+    cardTitle.innerText = "" + document.querySelector(".titleInput").value
+    cardAuthor.innerText = " by " + document.querySelector(".authorInput").value
+    cardPages.innerText = document.querySelector(".pagesInput").value + " pages"
+    card.classList.add("see");
 }
-
-const open = document.getElementById("open");
-const close = document.getElementById("close");
-const modal = document.getElementById("modal_container");
 
 open.addEventListener("click", () => {
 	modal.classList.add("show");
