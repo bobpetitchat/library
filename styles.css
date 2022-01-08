@@ -1,11 +1,9 @@
-
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-  font-family: 'Sora', sans-serif;
+  font-family: "Sora", sans-serif;
 }
-
 
 html,
 body {
@@ -18,15 +16,14 @@ header {
   max-width: 100%;
   background-color: #fff;
   display: flex;
-  flex-direction: row; 
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  font-family: 'Sora', sans-serif;
-
+  font-family: "Sora", sans-serif;
 }
 
 nav {
-  font-family: 'Pacifico', cursive;
+  font-family: "Pacifico", cursive;
   width: 300px;
   font-weight: 600;
   color: hsl(8, 94%, 53%);
@@ -48,7 +45,6 @@ section {
   position: absolute;
 }
 
-
 .context {
   background-color: #fff;
   min-height: 50px;
@@ -57,7 +53,7 @@ section {
 }
 
 button:hover {
-    color: hsl(45, 100%, 50%)
+  color: hsl(45, 100%, 50%);
 }
 
 input {
@@ -74,26 +70,26 @@ input {
   color: #161616;
   outline: none;
   background-color: transparent;
-  }
+}
 
 input:focus {
   border: 2px solid hsl(8, 94%, 53%);
   outline: none;
 }
- 
-main {  
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 15px;
-    gap: 15px;
-    text-align: center;
-    background-color: hsl(195, 2%, 96%, 0.2);
-    height: 100%;  
-    margin: 0;
-    top: 0;
-    left: 0;  
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 15px;
+  gap: 15px;
+  text-align: center;
+  background-color: hsl(195, 2%, 96%, 0.2);
+  height: 100%;
+  margin: 0;
+  top: 0;
+  left: 0;
 }
 
 .modal-container {
@@ -106,26 +102,26 @@ main {
   height: 50%;
   position: fixed;
   opacity: 0;
-	top: 0;
-	left: 0;
-	height: 100vh;
-	width: 100vw;
-	transition: opacity 0.3s ease;
-	pointer-events: none;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
 }
 
 .modal {
   display: flex;
   flex-direction: column;
   justify-content: center;
-	border-radius: 5px;
+  border-radius: 5px;
   justify-content: center;
   align-items: center;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-	text-align: center;
-	width: 350px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 350px;
   min-height: 300px;
-  transition: transform 0.3s ease; 
+  transition: transform 0.3s ease;
   gap: 15px;
   text-align: center;
   height: 40%;
@@ -133,15 +129,17 @@ main {
 }
 
 .modal-container.show {
-	opacity: 1;
-	pointer-events: auto;
+  opacity: 1;
+  pointer-events: auto;
 }
 
-#open,.addbutton, #close {
-    padding: 5px;
-    width: 100px;
-    max-height: 25px;
-  }
+#open,
+.addbutton,
+#close {
+  padding: 5px;
+  width: 100px;
+  max-height: 25px;
+}
 
 .modal-buttons {
   display: flex;
@@ -178,27 +176,25 @@ button {
   font-weight: 600;
   line-height: 16px;
   font-size: 13px;
-  transition-duration: .15s;
+  transition-duration: 0.15s;
   transition-property: all;
-  transition-timing-function: cubic-bezier(.4,0,.2,1);
-  }
-  
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    gap: 15px;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 15px;
+}
 
 .card {
-  width: 215px;
-  height: 200px;
-  background: hsl(214, 12%, 91%, 0.97);
-  padding: 10px;
+  width: 210px;
+  height: 170px;
+  background: hsl(61, 10%, 94%, 0.97);
   border-radius: 10px;
   overflow: hidden;
-  color: #33435A;
+  color: #33435a;
   position: relative;
   pointer-events: none;
   opacity: 0;
@@ -214,13 +210,13 @@ button {
   padding: 25px;
 }
 
- .cardTitle {
+.cardTitle {
   height: 25.33%;
   width: 100%;
   font-size: 18px;
   font-weight: bold;
   overflow: hidden;
-  text-overflow:ellipsis;
+  text-overflow: ellipsis;
 }
 
 .cardAuthor {
@@ -235,4 +231,4 @@ button {
   height: 33.33%;
   font-weight: bold;
   font-size: 12px;
-} 
+}
