@@ -81,6 +81,7 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  flex-wrap: wrap;
   align-items: flex-start;
   padding: 15px;
   gap: 15px;
@@ -189,8 +190,8 @@ button {
 }
 
 .card {
-  width: 210px;
-  height: 170px;
+  min-width: 210px;
+  min-height: 170px;
   background: hsl(61, 10%, 94%, 0.97);
   border-radius: 10px;
   overflow: hidden;

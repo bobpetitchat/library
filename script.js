@@ -11,7 +11,6 @@ const addbutton = document.querySelector(".addbutton");
 const titleInput = document.querySelector(".titleInput").value
 const authorInput = document.querySelector(".authorInput").value
 const pagesInput = document.querySelector(".pagesInput").value
-const bookList = document.querySelector(".bookList")
 let myLibrary = [];
 let book
 
@@ -31,11 +30,13 @@ const makeBook = () => {
 
 const updateBooks = () => {
     for (let i = 0; i < myLibrary.length; i++) {
-        addBooks(myLibrary[i])
+        addBooks(myLibrary[i])        
     }
+    displayBooks()
 }
 
- const addBooks = (item) => {
+const addBooks = (item) => {
+     
      const newdiv = document.createElement("div");
      const card_title = document.createElement("h2");
      const card_author = document.createElement("h3");
@@ -45,7 +46,11 @@ const updateBooks = () => {
      card_title.className = "cardTitle"
      card_author.className = "cardAuthor"
      card_pages.className = "cardPages"
-     bookList.appendChild(newdiv)
+     main.appendChild(newdiv)
+    
+    item.title = titleInput.value
+    item.author = authorInput.value
+    item.pages = pagesInput.value
      
      card_title.innerText = item.title
      card_author.innerText = ` by ${item.author} `
@@ -54,8 +59,12 @@ const updateBooks = () => {
      newdiv.appendChild(card_title)
      newdiv.appendChild(card_author)
      newdiv.appendChild(card_pages)
-     console.log(newdiv)
+    console.log(newdiv)
  }
+
+const displayBooks = () => {
+    main.querySelectorAll(".card").forEach(item => item.classList.add("see"))
+}  
 
 
 function addBookToLibrary() {   
@@ -74,14 +83,6 @@ function clearEv() {
     document.querySelector(".titleInput").value = "";
     document.querySelector(".authorInput").value = "";
     document.querySelector(".pagesInput").value = "";
-}
-
-
-function displayBook() {
-    cardTitle.innerText = "" + document.querySelector(".titleInput").value
-    cardAuthor.innerText = " by " + document.querySelector(".authorInput").value
-    cardPages.innerText = document.querySelector(".pagesInput").value + " pages"
-    card.classList.add("see");
 }
 
 open.addEventListener("click", () => {
