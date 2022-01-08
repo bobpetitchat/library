@@ -38,20 +38,17 @@ const newdiv = document.createElement("div");
   card_pages.className = "cardPages";
   main.appendChild(newdiv);
 
-  card_title.innerText = item.title;
-  card_author.innerText = item.author;
-  card_pages.innerText = item.pages;
+  card_title.innerText = `Title: ${item.title}`
+  card_author.innerText = `Author: ${item.author}`
+  card_pages.innerText = `${item.pages} pages`
 
   newdiv.appendChild(card_title);
   newdiv.appendChild(card_author);
   newdiv.appendChild(card_pages);
-    console.log(newdiv);
-
 };
 
 addbutton.addEventListener("click", () => {
     document.querySelector("main").innerHTML = "";
-
     makeBook();
     myLibrary.push(book);
     updateBooks();
@@ -62,7 +59,6 @@ addbutton.addEventListener("click", () => {
 const updateBooks = () => {
   for (let i = 0; i < myLibrary.length; i++) {
     addBook(myLibrary[i]);
-    console.log(myLibrary[i]);
   }
   displayBooks();
 };
