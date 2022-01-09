@@ -27,24 +27,30 @@ const makeBook = () => {
 
 
 const addBook = (item) => {
-const newdiv = document.createElement("div");
+  const newdiv = document.createElement("div");
   const card_title = document.createElement("h2");
   const card_author = document.createElement("h3");
   const card_pages = document.createElement("p");
+  const read_or_not = document.createElement("button")
+  const buttons_container = document.createElement("div");
 
   newdiv.className = "card";
+  read_or_not.className = "readornot"
   card_title.className = "cardTitle";
   card_author.className = "cardAuthor";
   card_pages.className = "cardPages";
+  buttons_container.className = "buttonsContainer";
   main.appendChild(newdiv);
-
-  card_title.innerText = `Title: ${item.title}`
-  card_author.innerText = `Author: ${item.author}`
-  card_pages.innerText = `${item.pages} pages`
-
   newdiv.appendChild(card_title);
   newdiv.appendChild(card_author);
   newdiv.appendChild(card_pages);
+  newdiv.appendChild(buttons_container);
+  buttons_container.appendChild(read_or_not); 
+
+  read_or_not.innerText = "Not read";
+  card_title.innerText = `${item.title}`
+  card_author.innerText = `by ${item.author}`
+  card_pages.innerText = `${item.pages} pages` 
 };
 
 addbutton.addEventListener("click", () => {
@@ -67,6 +73,20 @@ const displayBooks = () => {
     main.querySelectorAll(".card").forEach((item) => item.classList.add("see"));
 };
 
+const readBook = () => {
+  newdiv.classList.add("read");
+}
+
+const read_or_not = document.querySelector(".readornot")
+
+  read_or_not.addEventListener("click", () => {
+    if (read_or_not) {
+      readBook()
+      read_or_not.innerText = "Read";
+    }
+  })
+
+
 function clearEv() {
   document.querySelector(".titleInput").value = "";
   document.querySelector(".authorInput").value = "";
@@ -80,3 +100,4 @@ open.addEventListener("click", () => {
 close.addEventListener("click", () => {
   modal.classList.remove("show");
 });
+

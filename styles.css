@@ -83,7 +83,7 @@ main {
   justify-content: flex-start;
   flex-wrap: wrap;
   align-items: flex-start;
-  padding: 15px;
+  padding: 22px;
   gap: 15px;
   text-align: center;
   background-color: hsl(195, 2%, 96%, 0.2);
@@ -191,11 +191,11 @@ button {
 }
 
 .card {
-  width: 190px;
+  margin: 0;
+  width: 250px;
   max-width: 190px;
-  height: 190px;
-  background: hsl(61, 10%, 94%, 0.97);
-  border-radius: 10px;
+  height: 210px;
+  background: hsl(61, 10%, 94%, 0.85);
   overflow: hidden;
   color: #33435a;
   position: relative;
@@ -210,27 +210,58 @@ button {
   opacity: 1;
   pointer-events: auto;
   text-align: left;
-  padding: 25px;
+  padding: 20px;
+  border: hsl(233, 79%, 57%) 2px solid;
+}
+
+.card.see.read {
+  border: hsl(45, 100%, 50%) 3px solid;
+  color: hsl(45, 100%, 50%);
 }
 
 .cardTitle {
+  margin: 0;
   max-width: 100%;
-  min-height: 30%;
+  min-height: 20%;
+  max-height: 25%;
   font-size: 16px;
   font-weight: bold;
   overflow: hidden;
   text-overflow: ellipsis;
+  padding: 4px;
 }
 
 .cardAuthor {
-  margin-top: 5px;
+  margin: 0;
+  padding: 4px;
   max-width: 100%;
   font-weight: bold;
   font-size: 14px;
 }
 
 .cardPages {
-  height: 33.33%;
+  max-height: 22.33%;
   font-weight: bold;
   font-size: 12px;
+  text-align: right;
+  margin: 15px;
 }
+
+.buttonsContainer {
+  display: flex;
+  justify-content: center;
+  max-height: 33%;
+  padding: 0;
+  position: relative;
+  margin-top: 25px;
+}
+
+.readornot {  
+  color: blue;
+  position: absolute;
+ }
+
+.read {
+border:hsl(45, 100%, 50%) 5px solid;
+}
+
