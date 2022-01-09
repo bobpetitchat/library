@@ -46,7 +46,6 @@ const addBook = (item) => {
   newdiv.appendChild(card_pages);
   newdiv.appendChild(buttons_container);
   buttons_container.appendChild(read_or_not); 
-
   read_or_not.innerText = "Not read";
   card_title.innerText = `${item.title}`
   card_author.innerText = `by ${item.author}`
@@ -59,7 +58,7 @@ addbutton.addEventListener("click", () => {
     myLibrary.push(book);
     updateBooks();
     clearEv();
-  });
+});
 
 
 const updateBooks = () => {
@@ -70,22 +69,17 @@ const updateBooks = () => {
 };
 
 const displayBooks = () => {
-    main.querySelectorAll(".card").forEach((item) => item.classList.add("see"));
+  main.querySelectorAll(".card").forEach((item) => item.classList.add("see"));
+  const readornot = document.querySelector(".readornot")
+
+  readornot.addEventListener("click", () => {
+    readornot.innerText = "Read"
+    readornot.classList.add("read")
+    document.querySelector(".card").getElementsByClassName.border = "hsl(45, 100%, 50%) 2px solid"
+});
+
+  
 };
-
-const readBook = () => {
-  newdiv.classList.add("read");
-}
-
-const read_or_not = document.querySelector(".readornot")
-
-  read_or_not.addEventListener("click", () => {
-    if (read_or_not) {
-      readBook()
-      read_or_not.innerText = "Read";
-    }
-  })
-
 
 function clearEv() {
   document.querySelector(".titleInput").value = "";

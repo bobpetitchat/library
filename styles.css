@@ -214,10 +214,7 @@ button {
   border: hsl(233, 79%, 57%) 2px solid;
 }
 
-.card.see.read {
-  border: hsl(45, 100%, 50%) 3px solid;
-  color: hsl(45, 100%, 50%);
-}
+
 
 .cardTitle {
   margin: 0;
@@ -261,7 +258,7 @@ button {
   position: absolute;
  }
 
-.read {
-border:hsl(45, 100%, 50%) 5px solid;
+.readornot.read {
+  color:hsl(45, 100%, 50%)
 }
 
