@@ -36,7 +36,7 @@ const addBook = (item) => {
   const buttons_container = document.createElement("div");
   const deletebutton = document.createElement("button");
 
-  deletebutton.className = "delete";
+  deletebutton.className = "delete button";
   newdiv.className = "card";
   read_or_not.className = "readornot";
   card_title.className = "cardTitle";
