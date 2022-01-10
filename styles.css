@@ -18,7 +18,7 @@ header {
   background-color: #fff;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: baseline;
   justify-content: space-evenly;
   font-family: "Sora", sans-serif;
   margin: 0 auto;
@@ -34,7 +34,6 @@ nav {
   font-weight: 600;
   color: black;
   padding: 20px;
-  padding-bottom: 12px;
   font-size: 35px;
   margin: 0;
 }
