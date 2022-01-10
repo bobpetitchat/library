@@ -21,18 +21,19 @@
           Superbook
       </nav>
     <section>
-    
+      <div class="context">   
+      
+        <button class="button">Books</button>
+        <button class="button">Explore</button>
+        <button class="button">Trending</button>
+        </div>
     </header>
     <hr class="line" />
-  </section>
-<div class="context">   
-  <button id="open">Add a book</button>
-  <button>Books</button>
-  <button>Explore</button>
-  <button>Trending</button>
-  </div>
-
-  
+<div class="morecontext">
+  Want to <span id="btnhelper">
+     <button id="open">add a book?</button></span> Start today! 
+</div>
+  </section>  
       <hr class="line" />
   <div class="modal-container" id="modal_container">
     <div class="modal">
@@ -41,8 +42,8 @@
     <span>Author:</span> <input type="text" class="authorInput"></span>
     <span>Pages:</span> <input type="text" class="pagesInput"></span>
   </div>
-  <div class="modal-buttons">  <button class="addbutton">Add</button>
-    <button id="close">
+  <div class="modal-buttons">  <button class="addbutton button">Add</button>
+    <button id="close" class="button">
 			Close
 		</button> </div>
     </div>

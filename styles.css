@@ -18,29 +18,36 @@ header {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   font-family: "Sora", sans-serif;
+  margin: 0 auto;
+}
+
+header:first-child {
+  align-self: flex-start;
 }
 
 nav {
   font-family: "Pacifico", cursive;
   width: 300px;
   font-weight: 600;
-  color: hsl(8, 94%, 53%);
+  color: black;
   padding: 20px;
   padding-bottom: 12px;
   font-size: 35px;
+  margin: 0;
+
 }
 
 section {
-  max-width: 35%;
+  max-width: 65%;
 }
 
 .line {
   width: 100%;
   height: 1.2px;
   border: 0 none;
-  background-color: hsl(8, 94%, 53%);
+  background-color: black;
   margin-top: 0px;
   position: absolute;
 }
@@ -135,8 +142,7 @@ main {
   pointer-events: auto;
 }
 
-#open,
-.addbutton,
+.addbutton
 #close {
   padding: 5px;
   width: 100px;
@@ -163,7 +169,7 @@ hr {
   margin-left: auto;
 }
 
-button {
+.button {
   display: inline-block;
   outline: 0;
   text-align: center;
@@ -171,7 +177,7 @@ button {
   min-height: 50px;
   width: 200px;
   padding: 0 13px;
-  color: hsl(8, 94%, 53%);
+  color: black;
   vertical-align: top;
   border: 1px solid transparent;
   background: transparent;
@@ -193,11 +199,11 @@ button {
 .card {
   margin: 0;
   width: 250px;
+  color: black;
   max-width: 190px;
   height: 210px;
-  background: hsl(61, 10%, 94%, 0.85);
+  background: hsl(61, 10%, 94%, 0.95);
   overflow: hidden;
-  color: #33435a;
   position: relative;
   pointer-events: none;
   opacity: 0;
@@ -211,7 +217,6 @@ button {
   pointer-events: auto;
   text-align: left;
   padding: 20px;
-  border: hsl(233, 79%, 57%) 2px solid;
 }
 
 .cardTitle {
@@ -248,10 +253,69 @@ button {
 }
 
 .readornot {  
-  color: blue;
- }
+  display: inline-block;
+  outline: 0;
+  text-align: center;
+  cursor: pointer;
+  min-height: 50px;
+  width: 200px;
+  padding: 0 13px;
+  color: black;
+  vertical-align: top;
+  border: 1px solid transparent;
+  background: transparent;
+  font-weight: 600;
+  line-height: 16px;
+  font-size: 13px;
+  transition-duration: 0.15s;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
 
 .readornot.read {
   color:hsl(45, 100%, 50%)
 }
 
+.delete {
+  color: black;
+  padding: 5px;
+  margin-left: 135px;
+  top: 0;
+  max-height: 20%;
+  max-width: 20%;
+  position: absolute;
+}
+
+.delete:hover {
+  color: red;
+}
+
+.morecontext {
+  text-align: center;
+  background-color: white;
+  color: black;
+  height: 32px;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 5px;
+  position: relative;
+}
+
+#open {
+  padding: 0;
+  border: none;
+  max-width: 100px;
+  max-height: 30px;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+#open:hover {
+  text-decoration:yellow underline;
+  font-weight: 800;
+}
+
+.btnhelper {
+  padding: 0;
+}
