@@ -48,7 +48,7 @@ section {
   height: 1.2px;
   border: 0 none;
   background-color: black;
-  margin-top: 0px;
+  margin-top: 0;
   position: absolute;
 }
 
@@ -293,10 +293,9 @@ hr {
   text-align: center;
   background-color: white;
   color: black;
-  height: 32px;
+  height: 42px;
   font-weight: 600;
   font-size: 14px;
-  padding: 5px;
   position: relative;
 }
 
@@ -308,6 +307,7 @@ hr {
   background-color: white;
   color: black;
   cursor: pointer;
+  font-size: 14px;
   font-weight: 600;
 }
 
@@ -316,6 +316,3 @@ hr {
   font-weight: 800;
 }
 
-.btnhelper {
-  padding: 0;
-}
