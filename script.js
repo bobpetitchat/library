@@ -11,7 +11,8 @@ const addbutton = document.querySelector(".addbutton");
 
 let myLibrary = [];
 let book;
-
+let readOrNot;
+let i;
 function Book(title, author, pages) {
   this.title = title;
   this.author = author;
@@ -25,17 +26,16 @@ const makeBook = () => {
   book.pages = document.querySelector(".pagesInput").value;
 };
 
-
 const addBook = (item) => {
   const newdiv = document.createElement("div");
   const card_title = document.createElement("h2");
   const card_author = document.createElement("h3");
   const card_pages = document.createElement("p");
-  const read_or_not = document.createElement("button")
+  const read_or_not = document.createElement("button");
   const buttons_container = document.createElement("div");
 
   newdiv.className = "card";
-  read_or_not.className = "readornot"
+  read_or_not.className = "readornot";
   card_title.className = "cardTitle";
   card_author.className = "cardAuthor";
   card_pages.className = "cardPages";
@@ -45,21 +45,20 @@ const addBook = (item) => {
   newdiv.appendChild(card_author);
   newdiv.appendChild(card_pages);
   newdiv.appendChild(buttons_container);
-  buttons_container.appendChild(read_or_not); 
+  buttons_container.appendChild(read_or_not);
   read_or_not.innerText = "Not read";
-  card_title.innerText = `${item.title}`
-  card_author.innerText = `by ${item.author}`
-  card_pages.innerText = `${item.pages} pages` 
+  card_title.innerText = `${item.title}`;
+  card_author.innerText = `by ${item.author}`;
+  card_pages.innerText = `${item.pages} pages`;
 };
 
 addbutton.addEventListener("click", () => {
-    document.querySelector("main").innerHTML = "";
-    makeBook();
-    myLibrary.push(book);
-    updateBooks();
-    clearEv();
+  document.querySelector("main").innerHTML = "";
+  makeBook();
+  myLibrary.push(book);
+  updateBooks();
+  clearEv();
 });
-
 
 const updateBooks = () => {
   for (let i = 0; i < myLibrary.length; i++) {
@@ -68,17 +67,21 @@ const updateBooks = () => {
   displayBooks();
 };
 
+const checkIfRead = () => {
+  if ((readOrNot = true)) {
+    document.querySelector(".readornot").innerText = "Read";
+  } else {
+    document.querySelector(".readornot").innerText = "Not read";
+  }
+};
+
 const displayBooks = () => {
   main.querySelectorAll(".card").forEach((item) => item.classList.add("see"));
-  const readornot = document.querySelector(".readornot")
-
-  readornot.addEventListener("click", () => {
-    readornot.innerText = "Read"
-    readornot.classList.add("read")
-    document.querySelector(".card").getElementsByClassName.border = "hsl(45, 100%, 50%) 2px solid"
-});
-
-  
+  document.querySelectorAll(".readornot").forEach((e) =>
+    e.addEventListener("click", (e) => {
+      e.target.innerText === "Read" ? (e.target.innerText = "Not read") : (e.target.innerText = "Read");
+    })
+  );
 };
 
 function clearEv() {
@@ -94,4 +97,3 @@ open.addEventListener("click", () => {
 close.addEventListener("click", () => {
   modal.classList.remove("show");
 });
-

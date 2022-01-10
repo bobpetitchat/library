@@ -214,17 +214,12 @@ button {
   border: hsl(233, 79%, 57%) 2px solid;
 }
 
-
-
 .cardTitle {
   margin: 0;
   max-width: 100%;
-  min-height: 20%;
-  max-height: 25%;
+  min-height: 40%;
   font-size: 16px;
   font-weight: bold;
-  overflow: hidden;
-  text-overflow: ellipsis;
   padding: 4px;
 }
 
@@ -250,12 +245,10 @@ button {
   max-height: 33%;
   padding: 0;
   position: relative;
-  margin-top: 25px;
 }
 
 .readornot {  
   color: blue;
-  position: absolute;
  }
 
 .readornot.read {
