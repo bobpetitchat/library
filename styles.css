@@ -8,7 +8,8 @@
 html,
 body {
   height: 100%;
-  background-image: url("https://images.unsplash.com/photo-1588497859490-85d1c17db96d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+  background-image: url("https://images.unsplash.com/photo-1593430980602-d3165ab5f1b5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1421&q=80");
+  background-repeat: no-repeat;
   margin: 0 auto;
 }
 
@@ -71,7 +72,7 @@ input {
   border-radius: 0;
   width: 100px;
   height: 25px;
-  border: 1px solid hsl(8, 94%, 53%);
+  border: 1px solid black;
   padding: 0 16px;
   color: #161616;
   outline: none;
@@ -79,7 +80,7 @@ input {
 }
 
 input:focus {
-  border: 2px solid hsl(8, 94%, 53%);
+  border: 2px solid hsl(45, 100%, 50%);;
   outline: none;
 }
 
@@ -92,7 +93,7 @@ main {
   padding: 22px;
   gap: 15px;
   text-align: center;
-  background-color: hsl(195, 2%, 96%, 0.2);
+  background-color: none;
   height: 100%;
   margin: 0;
   top: 0;
@@ -201,7 +202,7 @@ hr {
   color: black;
   max-width: 190px;
   height: 210px;
-  background: hsl(61, 10%, 94%, 0.95);
+  background: #fff;
   overflow: hidden;
   position: relative;
   pointer-events: none;
@@ -292,10 +293,12 @@ hr {
   text-align: center;
   background-color: white;
   color: black;
-  height: 42px;
   font-weight: 600;
   font-size: 14px;
   position: relative;
+  padding: 1rem 0 1rem 0;
+  border-top: 1.5px solid black;
+  border-bottom: 1.5px solid black;
 }
 
 #open {
@@ -311,7 +314,8 @@ hr {
 }
 
 #open:hover {
-  text-decoration:yellow underline;
+  text-decoration: black underline;
+  color: hsl(45, 100%, 50%);
   font-weight: 800;
 }
 
