@@ -59,11 +59,10 @@ const addBook = (item) => {
 
 const assignAttribute = () => {
   let test = document.querySelectorAll(".card.see") 
-  let j
-  for (j = 0; j < test.length; j++) {
-test[j].setAttribute("number", "" + j);
+  for (let j = 0; j < test.length; j++) {
+test[j].setAttribute("id", "" + j);
    }
-   document.querySelectorAll(".card.see").forEach(elem => console.log(elem.getAttribute("number")));
+  // document.querySelectorAll(".card.see").forEach(elem => console.log(elem.getAttribute("number"))); //
 }
 
 addbutton.addEventListener("click", () => {
@@ -75,10 +74,25 @@ addbutton.addEventListener("click", () => {
   clearEv();
 });
 
+let to
+let removed
+const removeBook = () => {
+  document.querySelectorAll(".delete.button").forEach(elem => 
+    elem.addEventListener("click", (e) => {
+      to = e.target.parentNode.getAttribute("id")
+      console.log(to)
+      removed = document.getElementById(to);
+      console.log(removed)
+      removed.remove()
+      myLibrary.splice(1,)
+    }))
+}
+
 const updateBooks = () => {
   for (let i = 0; i < myLibrary.length; i++) {
     addBook(myLibrary[i]);
   }
+  removeBook()
   displayBooks();
 };
 
