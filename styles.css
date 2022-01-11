@@ -313,16 +313,15 @@ hr {
   max-width: 100px;
   max-height: 30px;
   background-color: white;
-  color: black;
   cursor: pointer;
   font-size: 14px;
   font-weight: 600;
+  text-decoration: black underline;
+  color: hsl(45, 100%, 50%);
 }
 
 #open:hover {
-  text-decoration: black underline;
-  color: hsl(45, 100%, 50%);
-  font-weight: 800;
+  text-decoration: none;
 }
 
 lu {

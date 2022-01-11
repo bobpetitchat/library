@@ -25,6 +25,7 @@ const makeBook = () => {
   book.title = document.querySelector(".titleInput").value;
   book.author = document.querySelector(".authorInput").value;
   book.pages = document.querySelector(".pagesInput").value;
+  book.id = j
 };
 
 const addBook = (item) => {
@@ -43,6 +44,7 @@ const addBook = (item) => {
   card_author.className = "cardAuthor";
   card_pages.className = "cardPages";
   buttons_container.className = "buttonsContainer";
+
   main.appendChild(newdiv);
   newdiv.appendChild(deletebutton);
   newdiv.appendChild(card_title);
@@ -50,6 +52,8 @@ const addBook = (item) => {
   newdiv.appendChild(card_pages);
   newdiv.appendChild(buttons_container);
   buttons_container.appendChild(read_or_not);
+
+  
   read_or_not.innerText = "Not read";
   card_title.innerText = `${item.title}`;
   card_author.innerText = `by ${item.author}`;
@@ -68,7 +72,7 @@ test[j].setAttribute("id", "" + j);
 addbutton.addEventListener("click", () => {
   document.querySelector("main").innerHTML = "";
   makeBook();
-  myLibrary.push(book);
+  myLibrary.push(book); 
   updateBooks();
   assignAttribute();
   clearEv();
@@ -76,15 +80,19 @@ addbutton.addEventListener("click", () => {
 
 let to
 let removed
+let index
 const removeBook = () => {
   document.querySelectorAll(".delete.button").forEach(elem => 
     elem.addEventListener("click", (e) => {
       to = e.target.parentNode.getAttribute("id")
       console.log(to)
+      index = myLibrary.map(e => e.id).indexOf(to);
+      console.log(index)
+      myLibrary.splice(1, 0)
+      console.log(myLibrary)
       removed = document.getElementById(to);
       console.log(removed)
       removed.remove()
-      myLibrary.splice(1,)
     }))
 }
 
