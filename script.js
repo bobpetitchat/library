@@ -25,7 +25,6 @@ const makeBook = () => {
   book.title = document.querySelector(".titleInput").value;
   book.author = document.querySelector(".authorInput").value;
   book.pages = document.querySelector(".pagesInput").value;
-  book.id = j
 };
 
 const addBook = (item) => {
