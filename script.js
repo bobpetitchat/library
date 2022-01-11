@@ -57,11 +57,21 @@ const addBook = (item) => {
   deletebutton.innerText = "X"
 };
 
+const assignAttribute = () => {
+  let test = document.querySelectorAll(".card.see") 
+  let j
+  for (j = 0; j < test.length; j++) {
+test[j].setAttribute("number", "" + j);
+   }
+   document.querySelectorAll(".card.see").forEach(elem => console.log(elem.getAttribute("number")));
+}
+
 addbutton.addEventListener("click", () => {
   document.querySelector("main").innerHTML = "";
   makeBook();
   myLibrary.push(book);
   updateBooks();
+  assignAttribute();
   clearEv();
 });
 
@@ -71,6 +81,7 @@ const updateBooks = () => {
   }
   displayBooks();
 };
+
 
 const displayBooks = () => {
   main.querySelectorAll(".card").forEach((item) => item.classList.add("see"));
