@@ -221,6 +221,7 @@ hr {
   max-width: 190px;
   height: 210px;
   background: #fff;
+border-radius: 0.2rem;
   overflow: hidden;
   position: relative;
   pointer-events: none;
@@ -228,14 +229,12 @@ hr {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-}
-
-.card.see {
   opacity: 1;
   pointer-events: auto;
   text-align: left;
   padding: 20px;
 }
+
 
 .cardTitle {
   margin: 0;

@@ -11,7 +11,6 @@ const addbutton = document.querySelector(".addbutton");
 
 let myLibrary = [];
 let book;
-let readOrNot;
 let i;
 
 function Book(title, author, pages) {
@@ -20,11 +19,18 @@ function Book(title, author, pages) {
   this.pages = Number(pages);
 }
 
+Book.prototype.giveId = function () {
+    for (let j = 0; j <= myLibrary.length ; j++) {
+        this.id = ""+j
+    }
+}
+
 const makeBook = () => {
   book = new Book();
-  book.title = document.querySelector(".titleInput").value;
-  book.author = document.querySelector(".authorInput").value;
-  book.pages = document.querySelector(".pagesInput").value;
+    book.title = document.querySelector(".titleInput").value; 
+    book.author = document.querySelector(".authorInput").value;
+    book.pages = document.querySelector(".pagesInput").value;
+    book.giveId()
 };
 
 const addBook = (item) => {
@@ -63,7 +69,7 @@ const addBook = (item) => {
 const assignAttribute = () => {
   let test = document.querySelectorAll(".card.see") 
   for (let j = 0; j < test.length; j++) {
-test[j].setAttribute("id", "" + j);
+  test[j].setAttribute("id", "" + j);
    }
   // document.querySelectorAll(".card.see").forEach(elem => console.log(elem.getAttribute("number"))); //
 }
@@ -84,13 +90,8 @@ const removeBook = () => {
   document.querySelectorAll(".delete.button").forEach(elem => 
     elem.addEventListener("click", (e) => {
       to = e.target.parentNode.getAttribute("id")
-      console.log(to)
-      index = myLibrary.map(e => e.id).indexOf(to);
-      console.log(index)
-      myLibrary.splice(1, 0)
-      console.log(myLibrary)
-      removed = document.getElementById(to);
-      console.log(removed)
+        removed = document.getElementById(to);
+        myLibrary.splice(1, to)
       removed.remove()
     }))
 }
