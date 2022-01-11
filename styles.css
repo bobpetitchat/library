@@ -10,15 +10,17 @@ body {
   height: 100%;
   background-image: url("https://images.unsplash.com/photo-1593430980602-d3165ab5f1b5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1421&q=80");
   background-repeat: no-repeat;
+  background-size: 100%;
   margin: 0 auto;
 }
+
 
 header {
   max-width: 100%;
   background-color: #fff;
   display: flex;
   flex-direction: row;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-evenly;
   font-family: "Sora", sans-serif;
   margin: 0 auto;
@@ -27,6 +29,7 @@ header {
 header:first-child {
   align-self: flex-start;
 }
+
 
 nav {
   font-family: "Pacifico", cursive;
@@ -39,7 +42,42 @@ nav {
 }
 
 section {
-  max-width: 65%;
+  max-width: 500px;
+  min-width: 400px;
+  min-height: 100%;
+  display: flex;
+  align-content: center;
+  padding: 4px;
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  display: inline;
+  outline: 0;
+  text-align: center;
+  cursor: pointer;
+  min-height: 50px;
+  width: 200px;
+  padding: 0 13px;
+  color: black;
+  vertical-align: top;
+  border: 1px solid transparent;
+  background: transparent;
+  font-weight: 600;
+  line-height: 16px;
+  font-size: 13px;
+  transition-duration: 0.15s;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+button:hover {
+  color: hsl(45, 100%, 50%);
+}
+
+#list {
+  width: 100px;
 }
 
 .line {
@@ -51,37 +89,19 @@ section {
   position: absolute;
 }
 
-.context {
-  background-color: #fff;
-  min-height: 50px;
-  display: flex;
-  justify-content: space-around;
-}
-
-button:hover {
-  color: hsl(45, 100%, 50%);
-}
-
-input {
-  box-sizing: border-box;
-  font-family: inherit;
+.calltoaction {
+  text-align: center;
+  background-color: white;
+  color: black;
+  font-weight: 600;
   font-size: 14px;
-  vertical-align: baseline;
-  font-weight: 400;
-  border-radius: 0;
-  width: 100px;
-  height: 25px;
-  border: 1px solid black;
-  padding: 0 16px;
-  color: #161616;
-  outline: none;
-  background-color: transparent;
+  position: relative;
+  padding: 1rem 0 1rem 0;
+  border-top: 1.5px solid black;
+  border-bottom: 1.5px solid black;
 }
 
-input:focus {
-  border: 2px solid hsl(45, 100%, 50%);;
-  outline: none;
-}
+/* modal */
 
 main {
   display: flex;
@@ -141,6 +161,27 @@ main {
   pointer-events: auto;
 }
 
+input {
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: 14px;
+  vertical-align: baseline;
+  font-weight: 400;
+  border-radius: 0;
+  width: 100px;
+  height: 25px;
+  border: 1px solid black;
+  padding: 0 16px;
+  color: #161616;
+  outline: none;
+  background-color: transparent;
+}
+
+input:focus {
+  border: 2px solid hsl(45, 100%, 50%);;
+  outline: none;
+}
+
 .addbutton
 #close {
   padding: 5px;
@@ -153,46 +194,24 @@ main {
   justify-content: center;
 }
 
-span {
-  font-size: 13px;
-  max-width: 250px;
-  font-weight: 800;
-}
-section {
-  display: flex;
-  flex-direction: column;
-  width: 88%;
-}
-hr {
-  margin-right: auto;
-  margin-left: auto;
-}
-
-.button {
-  display: inline-block;
-  outline: 0;
-  text-align: center;
-  cursor: pointer;
-  min-height: 50px;
-  width: 200px;
-  padding: 0 13px;
-  color: black;
-  vertical-align: top;
-  border: 1px solid transparent;
-  background: transparent;
-  font-weight: 600;
-  line-height: 16px;
-  font-size: 13px;
-  transition-duration: 0.15s;
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .wrapper {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   gap: 15px;
+}
+
+/* end of modal */
+
+span {
+  font-size: 13px;
+  max-width: 250px;
+  font-weight: 800;
+}
+
+hr {
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .card {
@@ -288,18 +307,6 @@ hr {
   color: red;
 }
 
-.morecontext {
-  text-align: center;
-  background-color: white;
-  color: black;
-  font-weight: 600;
-  font-size: 14px;
-  position: relative;
-  padding: 1rem 0 1rem 0;
-  border-top: 1.5px solid black;
-  border-bottom: 1.5px solid black;
-}
-
 #open {
   padding: 0;
   border: none;
@@ -317,4 +324,19 @@ hr {
   color: hsl(45, 100%, 50%);
   font-weight: 800;
 }
+
+lu {
+  list-style: none;
+}
+
+li {
+  display: inline-block;
+}
+
+@media (max-width: 400px) {
+ section {
+   width: 300px;
+ }
+}
+
 
