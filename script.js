@@ -80,7 +80,7 @@ addbutton.addEventListener("click", () => {
   myLibrary.push(book); 
   updateBooks();
   assignAttribute();
-  clearEv();
+  clearBooklist();
 });
 
 let to
@@ -112,12 +112,23 @@ const displayBooks = () => {
       e.target.innerText === "Read"
         ? (e.target.innerText = "Not read")
         : (e.target.innerText = "Read");
-         }
+    }
     )
   )
 }
 
-function clearEv() {
+// const makeBlue = () => {
+//   document.querySelectorAll(".readornot").forEach((item) => {
+//   if (item.innerText = "Read") {
+//     item.style.color = "blue"
+//   } else if (item.innerText = "Not read") {
+//     item.style.color = "black"
+//   }
+//   }
+//   )
+// }
+
+function clearBooklist() {
   document.querySelector(".titleInput").value = "";
   document.querySelector(".authorInput").value = "";
   document.querySelector(".pagesInput").value = "";
